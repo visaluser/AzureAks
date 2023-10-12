@@ -13,4 +13,5 @@ steps:
     backendAzureRmResourceGroupName: 'visal-resource-group'
     backendAzureRmStorageAccountName: 'visalstorage'
     backendAzureRmContainerName: 'visalcontainer'
+    backendAzureRmKey: 'visalkey'
 
