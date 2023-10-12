@@ -17,6 +17,10 @@ steps:
 - task: TerraformTaskV4@4
   inputs:
     provider: 'azurerm'
+    command: 'validate'
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'Azure subscription 1(0e5b585e-4de9-411c-8794-f1128451b880)'
 - task: TerraformTaskV4@4
