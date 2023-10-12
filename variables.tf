@@ -28,9 +28,11 @@ variable "client_secret" {
   description = "Azure Client Secret"
 }
 variable "subscription_id" {
+  default     = "$(subscription_id)"
   type = string
 }
 
 variable "tenant_id" {
+  default     = "$(tenant_id)"
   type = string
 }
