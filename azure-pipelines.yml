@@ -9,16 +9,19 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'Azure subscription 1(2)(0e5b585e-4de9-411c-8794-f1128451b880)'
+    backendServiceArm: 'Azure subscription 1(0e5b585e-4de9-411c-8794-f1128451b880)'
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'Azure subscription 1(0e5b585e-4de9-411c-8794-f1128451b880)'
+    backendAzureRmResourceGroupName: 'visal-resource-group'
+    backendAzureRmStorageAccountName: 'visalstorage'
+    backendAzureRmContainerName: 'visalcontainer'
+    backendAzureRmKey: 'visalkey1'
     backendAzureRmResourceGroupName: 'visal-resource-group'
     backendAzureRmStorageAccountName: 'visalstorage'
     backendAzureRmContainerName: 'visalcontainer'
     backendAzureRmKey: 'visalkey'
 
-- task: TerraformTaskV4@4
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
-    commandOptions: '-var="client_id=$(client_id)" -var="client_secret=$(client_secret)" -var="subscription_id=$(subscription_id)" -var="tenant_id=$(tenant_id)"'
-    environmentServiceNameAzureRM: 'Azure subscription 1(0e5b585e-4de9-411c-8794-f1128451b880)'
 
