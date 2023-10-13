@@ -29,8 +29,3 @@ steps:
     command: 'apply'
     commandOptions: '-var="client_id=$(client_id)" -var="client_secret=$(client_secret)" -var="subscription_id=$(subscription_id)" -var="tenant_id=$(tenant_id)"'
     environmentServiceNameAzureRM: 'Azure subscription 1(0e5b585e-4de9-411c-8794-f1128451b880)'
-- task: TerraformTaskV4@4
-  inputs:
-    provider: 'azurerm'
-    command: 'destroy'
-    environmentServiceNameAzureRM: 'Azure subscription 1(0e5b585e-4de9-411c-8794-f1128451b880)'
